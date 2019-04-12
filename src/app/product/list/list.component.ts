@@ -7,8 +7,9 @@ import { ProductsService } from 'src/app/shared/services/products.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  private products;
-  private total = 0 ;
+  public products;
+  public total = 0 ;
+  public product;
   constructor(private productsServe :ProductsService) { }
 
   ngOnInit() {
@@ -17,8 +18,10 @@ export class ListComponent implements OnInit {
   })
   }
   onClickCount(e){
-
+//this.product= e ;
     this.total = this.total + e ;
+    //console.log(this.product);
     console.log(this.total)
   }
+ 
 }

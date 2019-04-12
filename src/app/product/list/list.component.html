@@ -1,3 +1,4 @@
+<div>total = {{total}}</div>
 <div *ngFor ="let product of products">
  
   <app-item [product]="product" (onClickCount)="onClickCount($event)"></app-item>

@@ -1,5 +1,6 @@
+import { Product } from './../../shared/models/product';
 import { Component, OnInit, Input, Output ,EventEmitter} from '@angular/core';
-import { Product } from 'src/app/shared/models/product';
+
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Product } from 'src/app/shared/models/product';
 export class ItemComponent implements OnInit {
   @Input() product: Product;
   @Output() onClickCount = new EventEmitter();
+  @Output() onClickCart = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -27,5 +29,10 @@ export class ItemComponent implements OnInit {
   }
   clickToCount(){
    this.onClickCount.emit(1);
+    //this.onSelctProduct.emit(this.product);
+    console.log(this.product)
+    this.onClickCart.emit(this.product);
+    
   }
+  
 }

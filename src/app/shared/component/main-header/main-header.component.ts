@@ -10,9 +10,9 @@ import { forEach } from '@angular/router/src/utils/collection';
 export class MainHeaderComponent implements OnInit {
 
   constructor(private productsServe :ProductsService) { }
-  private cart : number = 0;
-  private allproducts : any ;
-  private cartOfProducts : any = [] ;
+  public cart : number = 0;
+  public allproducts : any ;
+  public cartOfProducts : any = [] ;
   ngOnInit() {
     this.productsServe.getProducts().subscribe(res =>{
       this.allproducts = res;

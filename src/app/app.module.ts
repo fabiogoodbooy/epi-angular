@@ -9,12 +9,18 @@ import { UsersModule } from './users/users.module';
 import { MainHeaderComponent } from './shared/component/main-header/main-header.component';
 import { FooterComponent } from './shared/component/footer/footer.component';
 import { ProductModule } from './product/product.module';
+import { PipesPipe } from './shared/pipes.pipe';
+import { TrancatePipe } from './shared/pipes/trancate.pipe';
+import { TruncatePipe } from './shared/pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHeaderComponent,
     FooterComponent,
+    PipesPipe,
+    TrancatePipe,
+    TruncatePipe,
     
   ],
   imports: [
